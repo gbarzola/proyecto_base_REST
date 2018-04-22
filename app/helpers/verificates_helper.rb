@@ -1,0 +1,2 @@
+module VerificatesHelper
+end

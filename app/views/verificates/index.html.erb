@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Verificates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @verificates.each do |verificate| %>
+      <tr>
+        <td><%= link_to 'Show', verificate %></td>
+        <td><%= link_to 'Edit', edit_verificate_path(verificate) %></td>
+        <td><%= link_to 'Destroy', verificate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Verificate', new_verificate_path %>

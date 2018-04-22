@@ -1,10 +1,3 @@
-== README
-
-Esta solucion de la tabla Producto cuyos campos son: codigo, descripción, precio, stock via Servicio REST RegistroWSREST (PRODUCT)
-tal que reciba como parámetro un codigo de producto, registre el producto verificando su no existencia del código.
-
-
-```ruby
 class Api::V1::ProductosController < ApplicationController
   
   skip_before_action :verify_authenticity_token
@@ -39,7 +32,3 @@ class Api::V1::ProductosController < ApplicationController
       params.permit(:id_producto, :descripcion_producto, :precio_producto, :stockCrear)
     end
 end
-```
-
--La verificación de que no exista el código debe realizarlo otro servicio REST ConsultaWSREST (VERIFICATE).
-

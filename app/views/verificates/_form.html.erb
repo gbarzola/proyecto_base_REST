@@ -1,0 +1,17 @@
+<%= form_for(@verificate) do |f| %>
+  <% if @verificate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@verificate.errors.count, "error") %> prohibited this verificate from being saved:</h2>
+
+      <ul>
+      <% @verificate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
